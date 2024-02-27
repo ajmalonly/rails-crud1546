@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="banner" style="background-image: url('https://source.unsplash.com/random/1200x300'); height: 300px; background-size: cover; background-position: center;">
+    <h1 class="text-center text-white p-5" style="font-family: 'Verdana', sans-serif;">My Restaurants</h1>
+  </div>
+  <div class="card mt-4" style="background-color: #f7f7f7; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <ul class="list-group list-group-flush">
+      <% @restaurants.each do |restaurant| %>
+        <li class="list-group-item" style="background-color: #ffffff; border: none; transition: background-color 0.3s;">
+          <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-dark", style: "text-decoration: none; font-size: 18px; display: block; padding: 10px;" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
